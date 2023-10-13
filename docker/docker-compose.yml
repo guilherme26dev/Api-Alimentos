@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: meu-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: teste
+      POSTGRES_PASSWORD: teste
+      POSTGRES_DB: BD_ALIMENTOS
+    volumes:
+      - ./data:/var/lib/postgresql/data
