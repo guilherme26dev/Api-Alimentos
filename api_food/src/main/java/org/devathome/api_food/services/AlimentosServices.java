@@ -30,4 +30,8 @@ public class AlimentosServices {
         alimentosRepository.save(atualizar);
         return null;
     }
+
+    public void excluirAlimento(AlimentosEntity id){
+        alimentosRepository.delete(id);
+    }
 }
