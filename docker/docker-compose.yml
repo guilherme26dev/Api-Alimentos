@@ -7,8 +7,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: teste
-      POSTGRES_PASSWORD: teste
-      POSTGRES_DB: BD_ALIMENTOS
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD:  # Deixe em branco
+      POSTGRES_DB: meu_banco_de_dados
     volumes:
       - ./data:/var/lib/postgresql/data
+    command: ["postgres", "-c", "listen_addresses=*"]

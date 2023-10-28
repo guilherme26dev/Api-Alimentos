@@ -25,4 +25,9 @@ public class AlimentosServices {
     public Optional<AlimentosEntity> findOne(Long id) {
         return alimentosRepository.findById(id); // Use o método findById() do repositório
     }
+
+    public Optional<AlimentosEntity> salvarAlimento(AlimentosEntity atualizar){
+        alimentosRepository.save(atualizar);
+        return null;
+    }
 }
