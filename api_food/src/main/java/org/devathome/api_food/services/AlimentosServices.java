@@ -18,11 +18,11 @@ public class AlimentosServices {
         this.alimentosRepository = alimentosRepository;
     }
 
-    public List<AlimentosRepository> findAll() {
-        return alimentosRepository.findAll();
+    public List<AlimentosEntity> findAll() {
+        return alimentosRepository.findAll(); // Use o método findAll() do repositório
     }
 
-    public Optional<AlimentosRepository> findOne(Long id) {
-        return alimentosRepository.findById(id);
+    public Optional<AlimentosEntity> findOne(Long id) {
+        return alimentosRepository.findById(id); // Use o método findById() do repositório
     }
 }
